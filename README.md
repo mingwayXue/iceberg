@@ -81,3 +81,15 @@ This project Iceberg also has modules for adding Iceberg support to processing e
 
 See the [Multi-Engine Support](https://iceberg.apache.org/multi-engine-support/) page to know about Iceberg compatibility with different Spark, Flink and Hive versions.
 For other engines such as Presto or Trino, please visit their websites for Iceberg integration details.
+
+
+## 构建说明
+> 执行./gradlew 报没有该命令
+> 需要在该目录下执行：gradle wrapper 
+> git 拉取代码前，先设置: git config --global core.autocrlf false
+> 
+
+执行 gradle 命令:
+- 构建和运行测试: ./gradlew build
+- 构建并跳过测试: ./gradlew build -x test -x integrationTest
+- 修复代码样式: ./gradlew spotlessApply
